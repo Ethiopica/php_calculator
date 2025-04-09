@@ -5,21 +5,18 @@ if (isset($_POST['submit'])) {
     $num2 = $_POST['num2'];
     $operator = $_POST['operator'];
 
-    if (is_numeric($num1) && is_numeric($num2)) {
-        if ($operator == 'add') {
-            $result = $num1 + $num2;
-        } elseif ($operator == 'subtract') {
-            $result = $num1 - $num2;
-        } elseif ($operator == 'multiply') {
-            $result = $num1 * $num2;
-        } elseif ($operator == 'divide') {
-            $result = $num2 != 0 ? $num1 / $num2 : "Cannot divide by zero";
-        }
-    } else {
-        $result = "Please enter valid numbers";
+    if ($operator == 'add') {
+        $result = $num1 + $num2;
+    } elseif ($operator == 'subtract') {
+        $result = $num1 - $num2;
+    } elseif ($operator == 'multiply') {
+        $result = $num1 * $num2;
+    } elseif ($operator == 'divide') {
+        $result = $num1 / $num2;
     }
-}
-?>
+} ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
